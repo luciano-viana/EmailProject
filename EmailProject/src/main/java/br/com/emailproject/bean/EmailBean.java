@@ -19,6 +19,9 @@ public class EmailBean implements Serializable {
 
 	private static final long serialVersionUID = 4538755582654584073L;
 	
+	private static final String DESTINATARIO = "lucianoviana.dev@gmail.com";
+	private static final String ASSUNTO = "Mudança de senha!!";
+	
 	@Inject
 	private EmailService emailService;
 
@@ -30,7 +33,7 @@ public class EmailBean implements Serializable {
 	
 	private Email montarEmail() {//Enviar email estático
 		EmailLayout layout = new EmailLayout();
-		return layout.montarEmailAdministrador("lucianoviana.dev@gmail.com", "Mudança de senha!!");
+		return layout.montarEmailAdministrador(DESTINATARIO, ASSUNTO);
 	}
 }
 
