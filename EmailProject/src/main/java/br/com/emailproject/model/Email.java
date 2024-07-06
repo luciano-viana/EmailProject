@@ -1,10 +1,21 @@
 package br.com.emailproject.model;
 
+//Representa o e-mail "objeto email"
 public class Email {
 
 	private String destinatario;
 	private String assunto;
 	private String texto;
+	
+    /*Construtor com todos os atributos
+     * Um construtor em Java é um bloco de código especial dentro de uma classe, designado para inicializar novos objetos
+     * Caracteriza-se por ter o mesmo nome da classe e por não especificar um tipo de retorno, nem mesmo void
+     * */
+	public Email(String destinatario, String assunto, String texto) {
+		this.destinatario = destinatario;
+		this.assunto = assunto;
+		this.texto = texto;
+	}
 
 	public String getDestinatario() {
 		return destinatario;
