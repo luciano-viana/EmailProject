@@ -19,8 +19,10 @@ public class EmailBean implements Serializable {
 
 	private static final long serialVersionUID = 4538755582654584073L;
 
-	private static final String DESTINATARIO = "lucianoviana.dev@gmail.com";
-	private static final String ASSUNTO = "Mudança de senha!!";
+	//private static final String DESTINATARIO = "lucianoviana.dev@gmail.com";
+	private static final String DESTINATARIO = "josemarinho@gmail.com";
+	//private static final String ASSUNTO = "Mudança de senha!!";
+	private static final String ASSUNTO = "Alteração de cadastro!!";
 
 	@Inject
 	private EmailService emailService;
@@ -33,6 +35,7 @@ public class EmailBean implements Serializable {
 
 	private Email montarEmail() {// Enviar email estático
 		EmailLayout layout = new EmailLayout();
-		return layout.montarEmailAdministrador(DESTINATARIO, ASSUNTO);
+		//return layout.montarEmailAdministrador(DESTINATARIO, ASSUNTO);
+		return layout.montarEmailSecretaria(DESTINATARIO, ASSUNTO);
 	}
 }

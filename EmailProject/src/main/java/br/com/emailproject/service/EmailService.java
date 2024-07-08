@@ -64,7 +64,7 @@ public class EmailService extends Thread {
 
 		props.put("mail.smtp.starttls.enable", true);
 		props.put("mail.smtp.host", System.getProperty("email-project.mail.smtp.host"));
-		props.put("mail.smtp.port", System.getenv("email-project.mail.smtp.port"));
+		props.put("mail.smtp.port", System.getProperty("email-project.mail.smtp.port"));
 
 		Session session = Session.getInstance(props);
 		session.setDebug(false);
